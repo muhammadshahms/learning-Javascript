@@ -65,6 +65,21 @@
 // x--
 // console.log(x);
 
-let x = 10
-x -= 2
+// let x = 10
+// x -= 2
+// console.log(x);
+
+
+// const a = 10  //global scope or global variable
+// {
+//     const a = 5 //loacal scope or local variable 
+    
+// }
+// console.log(a);
+
+
+let x;
+x=10;
+x=9
+x=1000
 console.log(x);
