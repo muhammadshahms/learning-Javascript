@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add to Cart Example</title>
+</head>
+<body>
+  <h1>Product Name</h1>
+  <p>Description of the product.</p>
+  <p>Price: $10.00</p>
+  <button onclick="addToCart('Product 1', 'This is the first product.', 10)">Add to Cart</button>
+
+  <h1>Product Name 2</h1>
+  <p>Description of the second product.</p>
+  <p>Price: $15.00</p>
+  <button onclick="addToCart('Product 2', 'This is the second product.', 15)">Add to Cart</button>
+
+  <h1>Product Name 3</h1>
+  <p>Description of the third product.</p>
+  <p>Price: $20.00</p>
+  <button onclick="addToCart('Product 3', 'This is the third product.', 20)">Add to Cart</button>
+
+  <button onclick="removeFromCart()">Remove Item</button>
+  <button onclick="clearCart()">Clear Cart</button>
+  <p>Items in Cart: <span id="cartCount">0</span></p>
+  <p>Total Price: $<span id="cartPrice">0.00</span></p>
+  <p>Cart name <span id="cartname"></span></p>
+
+  <script>
+    var cart = [];
+    var cart_name = [];
+
+    function addToCart(name, description, price) {
+      var item = {
+        name: name,
+        description: description,
+        price: price
+      };
+      cart_name.push(item)
+      cart.push(item);
+      updateCartCount();
+      updateCartPrice();
+  
+    }
+
+    function removeFromCart() {
+      if (cart.length > 0) {
+        cart.pop()
+        updateCartCount();
+        updateCartPrice();
+       
+      }
+    }
+
+    function clearCart() {
+      cart = [];
+      updateCartCount();
+      updateCartPrice();
+   
+    }
+
+    function updateCartCount() {
+      var cartCount = cart.length;
+      document.getElementById("cartCount").innerHTML = cartCount;
+    }
+
+    function updateCartPrice() {
+      var totalcartname = "";
+      var totalPrice = 0;
+      for (var i = 0; i < cart.length; i++) {
+        totalcartname += "<br>" + cart_name[i].name + "<br>";
+        totalPrice += cart[i].price;
+      }
+      document.getElementById("cartname").innerHTML =totalcartname ;
+
+      document.getElementById("cartPrice").innerHTML = totalPrice.toFixed(2);
+    }
+
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Page</title>
+  </head>
+  <body>
+    <h1>Login</h1>
+    <form>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username"><br><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password"><br><br>
+      <button type="button" onclick="login()">Submit</button>
+    </form>
+
+    <script>
+      function login() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        if (username === "123" && password === "123")
+        {
+          alert("Login successful!");
+          window.location.href = "welcome.html";
+
+        } 
+        else 
+        {
+          alert("Login failed. Please try again.");
+        }
+      }
+    </script>
+  </body>
+</html>

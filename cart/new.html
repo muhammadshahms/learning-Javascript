@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shopping Cart</title>
+</head>
+<body>
+  <h1>Shopping Cart</h1>
+
+  <h2>Add Product</h2>
+  <label for="productName">Name:</label>
+  <input type="text" id="productName"><br>
+  <label for="productDescription">Description:</label>
+  <input type="text" id="productDescription"><br>
+  <label for="productPrice">Price:</label>
+  <input type="number" id="productPrice" step="0.01"><br>
+  <button onclick="addToCart()">Add to Cart</button>
+
+  <h2>Cart</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="cartTableBody">
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="2">Total:</td>
+        <td id="cartTotalPrice" colspan="2">$0.00</td>
+      </tr>
+    </tfoot>
+  </table>
+  
+  <script>
+    var cart = [];
+
+    function addToCart() {
+      var name = document.getElementById("productName").value;
+      var description = document.getElementById("productDescription").value;
+      var price = parseFloat(document.getElementById("productPrice").value);
+
+      if (name && description && price) {
+        var item = {
+          name: name,
+          description: description,
+          price: price
+        };
+        cart.push(item);
+        updateCart();
+      } else {
+        alert("Please fill in all product details.");
+      }
+    }
+
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      updateCart();
+    }
+
+    function clearCart() {
+      cart = [];
+      updateCart();
+    }
+
+    function updateCart() {
+      var cartTableBody = document.getElementById("cartTableBody");
+      var cartTotalPrice = document.getElementById("cartTotalPrice");
+      var totalPrice = 0;
+
+      // clear the cart table
+      cartTableBody.innerHTML = "";
+
+      // add items to the cart table
+      for (var i = 0; i < cart.length; i++) {
+        var item = cart[i];
+        var row = document.createElement("tr");
+        row.innerHTML = "<td style='border: solid'>" + item.name + "</td>" +
+                        "<td style='border: solid'>" + item.description + "</td>" +
+                        "<td style='border: solid'>$" + item.price.toFixed(2) + "</td>" +
+                        '<td><button onclick="removeFromCart(' + i + ')">Remove</button></td>';
+        cartTableBody.appendChild(row);
+        totalPrice += item.price;
+      }
+
+      // update the cart total price
+      cartTotalPrice.innerHTML = "$" + totalPrice.toFixed(2);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Example</title>
+  </head>
+  <body>
+    <h1>Welcome to my website</h1>
+    <p>Here is some content for you to read.</p>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+
+    <script>
+      // Select the <h1> element and change its text content
+      const heading = document.querySelector('h1');
+      heading.textContent = 'Hello, world!';
+
+      // Add a new item to the <ul> element
+      const list = document.querySelector('ul');
+      const newItem = document.createElement('li');
+      newItem.textContent = 'Item 4';
+      list.appendChild(newItem);
+    </script>
+  </body>
+</html>

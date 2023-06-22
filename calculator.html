@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function add(a, b) {
+        return a + b;
+      }
+
+      function subtract(a, b) {
+        return a - b;
+      }
+
+      function multiply(a, b) {
+        return a * b;
+      }
+
+      function divide(a, b) {
+        return a / b;
+      }
+
+      function calculate(operator, a, b) {
+        switch (operator) {
+          case '+':
+            return add(a, b);
+          case '-':
+            return subtract(a, b);
+          case '*':
+            return multiply(a, b);
+          case '/':
+            return divide(a, b);
+          default:
+            return 'Invalid operator';
+        }
+      }
+
+      function clearInputs() {
+        document.getElementById('a').value = '';
+        document.getElementById('b').value = '';
+        document.getElementById('result').value = '';
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Simple Calculator</h1>
+    <input type="text" id="result" disabled />
+    <br />
+    <br>
+    <input type="text" id="a" />
+    <br />
+    <input type="text" id="b" />
+    <br />
+    <br />
+    <button onclick="document.getElementById('result').value = calculate('+', parseFloat(document.getElementById('a').value), parseFloat(document.getElementById('b').value))">
+      +
+    </button>
+    <button onclick="document.getElementById('result').value = calculate('-', parseFloat(document.getElementById('a').value), parseFloat(document.getElementById('b').value))">
+      -
+    </button>
+    <button onclick="document.getElementById('result').value = calculate('*', parseFloat(document.getElementById('a').value), parseFloat(document.getElementById('b').value))">
+      *
+    </button>
+    <button onclick="document.getElementById('result').value = calculate('/', parseFloat(document.getElementById('a').value), parseFloat(document.getElementById('b').value))">
+      /
+    </button>
+    <br />
+    <br />
+    <button onclick="clearInputs()">Clear</button>  
+  </body>
+</html>

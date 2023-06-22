@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header>
+        <!-- place navbar here -->
+    </header>
+    <main>
+        <h1>Product Name</h1>
+        <p>Description of the product.</p>
+        <p>Price: $10.00</p>
+        <button onclick="addToCart('Product 1', 'This is the first product.', 10)">Add to Cart</button>
+
+        <h1>Product Name 2</h1>
+        <p>Description of the second product.</p>
+        <p>Price: $15.00</p>
+        <button onclick="addToCart('Product 2', 'This is the second product.', 15)">Add to Cart</button>
+
+        <h1>Product Name 3</h1>
+        <p>Description of the third product.</p>
+        <p>Price: $20.00</p>
+        <button onclick="addToCart('Product 3', 'This is the third product.', 20)">Add to Cart</button>
+   <br>
+   <br>     
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#Id2"
+            aria-controls="Id2">
+            cart
+        </button>
+
+        <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="Id2"
+            aria-labelledby="staticBackdropLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="staticBackdropLabel">Offcanvas</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div>
+                    <button onclick="removeFromCart()">Remove Item</button>
+                    <button onclick="clearCart()">Clear Cart</button>
+                    <p>Items in Cart: <span id="cartCount">0</span></p>
+                    <p>Total Price: $<span id="cartPrice">0.00</span></p>
+                    <p>Cart name <span id="cartname"></span></p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+</body>
+<script>
+    var cart = [];
+    var cart_name = [];
+
+    function addToCart(name, description, price) {
+      var item = {
+        name: name,
+        description: description,
+        price: price
+      };
+      cart_name.push(item)
+      cart.push(item);
+      updateCartCount();
+      updateCartPrice();
+  
+    }
+
+    function removeFromCart() {
+      if (cart.length > 0) {
+        cart.pop()
+        updateCartCount();
+        updateCartPrice();
+       
+      }
+    }
+
+    function clearCart() {
+      cart = [];
+      updateCartCount();
+      updateCartPrice();
+   
+    }
+
+    function updateCartCount() {
+      var cartCount = cart.length;
+      document.getElementById("cartCount").innerHTML = cartCount;
+    }
+
+    function updateCartPrice() {
+      var totalcartname = "";
+      var totalPrice = 0;
+      for (var i = 0; i < cart.length; i++) {
+        totalcartname += "<br>" + cart_name[i].name + "<br>";
+        totalPrice += cart[i].price;
+      }
+      document.getElementById("cartname").innerHTML =totalcartname ;
+
+      document.getElementById("cartPrice").innerHTML = totalPrice.toFixed(2);
+    }
+
+  </script>
+
+</html>
