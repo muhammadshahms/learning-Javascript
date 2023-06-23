@@ -1,4 +1,4 @@
-// Primitive
+// Data Types
 
 // x = "s"
 // console.log(typeof(x));
@@ -11,6 +11,9 @@
 
 // a= NaN  
 // console.log(typeof(a));
+
+
+
 
 a=[]
 console.log(typeof(a));
