@@ -12,9 +12,6 @@
 // a= NaN  
 // console.log(typeof(a));
 
-
-
-
 a=[]
 console.log(typeof(a));
 
