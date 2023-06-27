@@ -13,7 +13,6 @@
 // //   console.log(dosomething())
 //   function how() {
 //     return dosomething()
-    
 //   }
 
 //   console.log(how())
@@ -30,3 +29,4 @@ const sum = (a,b) => {
 console.log(sum(6,7));
 
 // anonymus funnction or fat arrow function
+
