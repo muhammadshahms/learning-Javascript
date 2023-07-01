@@ -32,7 +32,19 @@
 // console.log(myHorse.poop())
 
 
-// spread syntax
-const array = ["hello", "hye", "bye"];
-const obj = { ...array };
-console.log(obj)
+//// spread syntax
+// const array = ["hello", "hye", "bye"];
+// const obj = { ...array };
+// console.log(obj)
+
+
+
+function showFace() {
+    return this.face;
+}
+const jeff = {
+    face: "@"
+}
+
+let a = showFace.call(jeff)
+console.log(a)
