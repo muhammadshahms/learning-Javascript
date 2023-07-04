@@ -39,12 +39,13 @@
 
 
 
-function showFace() {
-    return this.face;
-}
-const jeff = {
-    face: "@"
-}
+// function showFace() {
+//     return this.face;
+// }
+// const jeff = {
+//     face: "@"
+// }
 
-let a = showFace.call(jeff)
-console.log(a)
+// let a = showFace.call(jeff)
+// console.log(a)
+
