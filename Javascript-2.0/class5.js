@@ -80,39 +80,41 @@
 // c=9
 // }
 
-
-
-// Array and multiple objects
-const person = [
-    {
-    name:"jeff",
-    face: "@",
-    features:{
-        hair:"black",
-        eyes:"blue",
-        teeth:"white",
-        nose:"black"
-    },
-},
-{
-    name:"john",
-    face: "@",
-    features:{
-        hair:"black",
-        eyes:"blue",
-        teeth:"white",
-        nose:"black"
-    },
-},
-{
-    name:"jane",
-    face: "@",
-    features:{
-        hair:"black",
-        eyes:"blue",
-        teeth:"white",
-        nose:"black"
-    },
+export function add(a,b) {
+    return a + b;
 }
-]
-console.log(person[0].features.name)
+
+//// Array and multiple objects
+// const person = [
+//     {
+//     name:"jeff",
+//     face: "@",
+//     features:{
+//         hair:"black",
+//         eyes:"blue",
+//         teeth:"white",
+//         nose:"black"
+//     },
+// },
+// {
+//     name:"john",
+//     face: "@",
+//     features:{
+//         hair:"black",
+//         eyes:"blue",
+//         teeth:"white",
+//         nose:"black"
+//     },
+// },
+// {
+//     name:"jane",
+//     face: "@",
+//     features:{
+//         hair:"black",
+//         eyes:"blue",
+//         teeth:"white",
+//         nose:"black"
+//     },
+// }
+// ]
+// console.log(person[0].features.name)
