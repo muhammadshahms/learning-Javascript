@@ -19,3 +19,4 @@ const showRoom = function () {
     }
 }
 showRooms()
+showRoom()
