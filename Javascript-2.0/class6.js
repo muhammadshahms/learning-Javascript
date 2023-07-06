@@ -21,6 +21,8 @@
 // const d = 7
 // const e = 6
 
+
+// object destructuring
 const {a,b,c,d,e} = {a:10,b:9,c:8,d:7,e:6}
 console.log(a)
 
