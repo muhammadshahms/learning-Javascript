@@ -80,41 +80,41 @@
 // c=9
 // }
 
-// export function add(a,b) {
-//     return a + b;
-// }
-
+export function add(a,b) {
+    return a + b;
+}
+export let a = "adkajkdjaskdb"
 //// Array and multiple objects
-const person = [
-    {
-        name: "jeff",
-        face: "@",
-        features: {
-            hair: "black",
-            eyes: "blue",
-            teeth: "white",
-            nose: "black"
-        },
-    },
-    {
-        name: "john",
-        face: "@",
-        features: {
-            hair: "black",
-            eyes: "blue",
-            teeth: "white",
-            nose: "black"
-        },
-    },
-    {
-        name: "jane",
-        face: "@",
-        features: {
-            hair: "black",
-            eyes: "blue",
-            teeth: "white",
-            nose: "black"
-        },
-    }
-]
-console.log(person[0].features.hair)
+// const person = [
+//     {
+//         name: "jeff",
+//         face: "@",
+//         features: {
+//             hair: "black",
+//             eyes: "blue",
+//             teeth: "white",
+//             nose: "black"
+//         },
+//     },
+//     {
+//         name: "john",
+//         face: "@",
+//         features: {
+//             hair: "black",
+//             eyes: "blue",
+//             teeth: "white",
+//             nose: "black"
+//         },
+//     },
+//     {
+//         name: "jane",
+//         face: "@",
+//         features: {
+//             hair: "black",
+//             eyes: "blue",
+//             teeth: "white",
+//             nose: "black"
+//         },
+//     }
+// ]
+// console.log(person[0].features.hair)
