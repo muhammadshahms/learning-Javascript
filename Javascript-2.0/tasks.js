@@ -106,3 +106,77 @@ for (var i = 1; i <= number; i++) {
     factorial *= i;
 }
 console.log("Factorial of", number + ":", factorial);
+
+// Task 4
+// if conditions questions
+// Question 1:
+// Write an if condition that checks if a given number is positive, negative, or zero. Display a message indicating the number's sign.
+
+var number = -7;
+
+if (number > 0) {
+    console.log("Number is positive.");
+} else if (number < 0) {
+    console.log("Number is negative.");
+} else {
+    console.log("Number is zero.");
+}
+// Question 2:
+// Write an if condition that checks if a given string is a palindrome. A palindrome is a word or phrase that reads the same backward as forward. Display a message indicating whether the string is a palindrome or not.
+
+var string = "racecar";
+var reversedString = string.split("").reverse().join("");
+
+if (string === reversedString) {
+    console.log("The string is a palindrome.");
+} else {
+    console.log("The string is not a palindrome.");
+}
+// Question 3:
+// Write an if condition that checks if a given number is a prime number. Display a message indicating whether the number is prime or not.
+
+var number = 17;
+var isPrime = true;
+
+if (number <= 1) {
+    isPrime = false;
+} else {
+    for (var i = 2; i <= Math.sqrt(number); i++) {
+        if (number % i === 0) {
+            isPrime = false;
+            break;
+        }
+    }
+}
+
+if (isPrime) {
+    console.log("The number is prime.");
+} else {
+    console.log("The number is not prime.");
+}
+// Question 4:
+// Write an if condition that checks if a given year is a leap year or not. If it is a leap year, display a message indicating that it has 366 days; otherwise, display a message indicating that it has 365 days.
+
+var year = 2024;
+var isLeapYear = false;
+
+if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+    isLeapYear = true;
+}
+
+if (isLeapYear) {
+    console.log("The year has 366 days (leap year).");
+} else {
+    console.log("The year has 365 days (non-leap year).");
+}
+// Question 5:
+// Write an if condition that checks if a given number is a perfect square. Display a message indicating whether the number is a perfect square or not.
+
+var number = 16;
+var squareRoot = Math.sqrt(number);
+
+if (squareRoot % 1 === 0) {
+    console.log("The number is a perfect square.");
+} else {
+    console.log("The number is not a perfect square.");
+}

@@ -15,6 +15,7 @@
 //     console.log(element)
 // }
 
+
 // const a = 10
 // const b = 9
 // const c = 8
@@ -25,8 +26,6 @@
 // object destructuring
 const {a,b,c,d,e} = {a:10,b:9,c:8,d:7,e:6}
 console.log(a)
-
-
 
 // var a ="jhello"
 // {
