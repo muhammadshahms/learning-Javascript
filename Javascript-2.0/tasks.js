@@ -26,7 +26,8 @@ console.log(product);
 
 
 
-//Task 2: "Write a JavaScript function that calculates the total price of a product, including the GST (Goods and Services Tax). The function should take two parameters:.
+//Task 2: "Write a JavaScript function that calculates the total price of a product, 
+// including the GST (Goods and Services Tax). The function should take two parameters:.
 
 
 // Function to calculate total price with GST
