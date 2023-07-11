@@ -18,7 +18,7 @@ const myTimeout = setTimeout(() => {
 }, 2000);
 
 
-const Timeout = setTimeout(greeting, 1000);
+const Timeout = setTimeout(greeting, 7000);
 
 
 function greeting(){
