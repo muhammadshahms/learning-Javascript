@@ -101,8 +101,8 @@ if (row === col && col === row) {
     }
     let arrString = arr.map(row => row.join(' ')).join('\n');
     console.log(arrString);
-
 }
+
 else {
     console.log("Invalid");
 }
