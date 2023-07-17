@@ -89,20 +89,20 @@ let col = 3;
 let h = 0
 
 // Loop to initialize 2D array elements.
-// if (row === col && col === row) {
-//     for (let i = 0; i < row; i++) {
-//         arr[i] = [];
-//         for (let j = 0; j < col; j++) {
-//             arr[i][j] = h++;
-//         }
-//     }
-//     let arrString = arr.map(row => row.join(' ')).join('\n');
-//     console.log(arrString);
+if (row === col && col === row) {
+    for (let i = 0; i < row; i++) {
+        arr[i] = [];
+        for (let j = 0; j < col; j++) {
+            arr[i][j] = h++;
+        }
+    }
+    let arrString = arr.map(row => row.join(' ')).join('\n');
+    console.log(arrString);
 
-// }
-// else {
-//     console.log("Invalid");
-// }
+}
+else {
+    console.log("Invalid");
+}
 
 
 
