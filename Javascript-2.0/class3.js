@@ -36,5 +36,3 @@ const car = {
     model: 'Corolla',
     year: 2020,
 }
-
-const car2 = 
