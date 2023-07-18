@@ -30,3 +30,9 @@ console.log(sum(6,7));
 
 // anonymus funnction or fat arrow function
 
+
+const car = {
+   make: 'Toyota',
+    model: 'Corolla',
+    year: 2020,
+}
