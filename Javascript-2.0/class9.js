@@ -1,9 +1,11 @@
 async function app() {
     const karachiPromise = new Promise((res, rej) => {
-        let temp = 5
+        let temp = {
+            cool:30
+        }
         if (temp <= 50) {
             setTimeout(() => {
-                res("27 Deg")
+                res(temp.cool)
             }, 2000)
         } else {
             rej("very hot")
