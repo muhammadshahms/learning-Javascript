@@ -17,6 +17,6 @@ async function fetchData() {
   
 }
 
-// async me .then ki jagah await lagate hain
+// async me .then ki jagah await lagate hain or .then bhi laga skte ho
 
 fetchData();
