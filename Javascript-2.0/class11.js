@@ -17,4 +17,6 @@ async function fetchData() {
   
 }
 
+// async me .then ki jagah await lagate hain
+
 fetchData();
