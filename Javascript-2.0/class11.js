@@ -32,9 +32,6 @@
 //     .catch(err => console.log(err));
 
 
-
-
-
 async function promiss(){
 const prom= await fetch('https://jsonplaceholder.typicode.com/posts',{
     method: 'POST',
@@ -47,8 +44,9 @@ const prom= await fetch('https://jsonplaceholder.typicode.com/posts',{
         price:200
     })
 })
-
 const _data =await prom.json()
 console.log(_data);
 }
+
+
 promiss()

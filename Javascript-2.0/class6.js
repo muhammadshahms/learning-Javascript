@@ -7,6 +7,9 @@
 // }
 // table(5)
 
+import { arry } from "./class5.js";
+console.log(arry);
+
 // array = [1,4,5,6,7,6,6]
 // // console.log(array.length)
 // for (let index = 0; index < array.length; index++) {

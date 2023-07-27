@@ -43,10 +43,32 @@
 // console.log(myHorse.poop())
 
 
+// // simple function
+// function app(a,b) {
+//     return a+b
+// }
+// console.log(app(1,6))
+
+// // anonymus function
+// const af = function(a,b){
+//     return a+b
+// }
+// console.log(af(4,6))
+
+// // fat arrow function
+// const fa = (a,b) => {
+//     return a+b
+// }
+// console.log(fa(4,6))
+
+// const arr = [1,2,3,4];
+// const obj = {...arr}
+// console.log(obj);
+
+
 // spread syntax
 // const array = ["hello", "hye", "bye","cycle"];
 // const obj = { ...array}; //copy array
-
 // const dos =[...obj]
 // console.log(dos)
 
@@ -61,6 +83,9 @@
 
 // let a = showFace.call(jeff)
 // console.log(a)
+
+
+// export const arry = [1,2,3,4];
 
 
 // export const Car=(a,b,c)=>{
@@ -80,10 +105,10 @@
 // c=9
 // }
 
-export function add(a,b) {
-    return a + b;
-}
-export let a = "adkajkdjaskdb"
+// export function add(a,b) {
+//     return a + b;
+// }
+// export let a = "adkajkdjaskdb"
 //// Array and multiple objects
 // const person = [
 //     {
@@ -118,3 +143,23 @@ export let a = "adkajkdjaskdb"
 //     }
 // ]
 // console.log(person[0].features.hair)
+
+let cars = [{
+    name: "BMW",
+    model: "X5",
+    engineType: "v8",
+    color: "black",
+},
+{
+    name: "Audi",
+    model: "X3",
+    engineType: "v6",
+    color: "white",
+}
+]
+
+const showroom = cars.map((car) => {
+    return `the ${car.name} is ${car.color}`
+})
+console.log(showroom);
+document.getElementById('liid').innerHTML=showroom
