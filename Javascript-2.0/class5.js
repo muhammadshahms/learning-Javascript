@@ -144,22 +144,57 @@
 // ]
 // console.log(person[0].features.hair)
 
-let cars = [{
-    name: "BMW",
-    model: "X5",
-    engineType: "v8",
-    color: "black",
-},
-{
-    name: "Audi",
-    model: "X3",
-    engineType: "v6",
-    color: "white",
-}
+// let cars = [{
+//     name: "BMW",
+//     model: "X5",
+//     engineType: "v8",
+//     color: "black",
+// },
+// {
+//     name: "Audi",
+//     model: "X3",
+//     engineType: "v6",
+//     color: "white",
+// }
+// ]
+
+// const showroom = cars.map((car) => {
+//     return `the ${car.name} is ${car.color}`
+// })
+// console.log(showroom);
+// document.getElementById('liid').innerHTML=showroom
+
+const showRoom=[
+    {
+        name:"Mehran",
+        model:"X5",
+        engineType:{
+            name:"v8",
+            description:"jafjkkja"
+        }
+    },
+    {
+        name:"ChinChi",
+        model:"150",
+        engineType:"v6",
+    }
 ]
 
-const showroom = cars.map((car) => {
-    return `the ${car.name} is ${car.color}`
-})
-console.log(showroom);
-document.getElementById('liid').innerHTML=showroom
+
+console.log(showRoom.length);
+
+
+// console.log(`${showRoom[0].name} engine type ${showRoom[0].engineType.name} `);
+
+
+
+
+for(let i=0;i<=showRoom.length;i++){
+    console.log(showRoom[i].name);
+}
+
+
+
+
+
+

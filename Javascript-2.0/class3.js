@@ -26,12 +26,26 @@
 // }
 
 
+const obj = {
+    name: "",
+    desc: function () {
+
+    }
+}
+
+
+const add = function (a, b) {
+    return a + b
+
+}
+console.log(add(1, 1));
+
 
 // function add(x,y){
-//     console.log(x+y);
+//    return x+y
 // }
 // console.log(add(5,6));
-// 54
+// // 54
 
 
 
@@ -54,7 +68,7 @@
 
 // // const sum = function(a,b){
 // //     return a+b
-// // } 
+// // }
 // console.log(sum(6,7));
 
 // // anonymus funnction or fat arrow function
