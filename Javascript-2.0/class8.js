@@ -1,38 +1,38 @@
-async function app() {
-        let KarachiWeather = new Promise((resolve, reject) => {
-                setTimeout(() => {
-                        resolve("27 Deg")
-                }, 2000)
+// async function app() {
+//         let KarachiWeather = new Promise((resolve, reject) => {
+//                 setTimeout(() => {
+//                         resolve("27 Deg")
+//                 }, 2000)
 
-        }).then((error) => {
-                console.error("Error fetching Karachi Weather:", error)
-        });
+//         }).then((error) => {
+//                 console.error("Error fetching Karachi Weather:", error)
+//         });
 
-        let LahoreWeather = new Promise((resolve, reject) => {
-                setTimeout(() => {
-                        resolve("21 Deg")
-                }, 5000)
-        })
+//         let LahoreWeather = new Promise((resolve, reject) => {
+//                 setTimeout(() => {
+//                         resolve("21 Deg")
+//                 }, 5000)
+//         })
 
-        console.log("Fetching Karachi Weather Please wait ...")
-        let KarachiW = await KarachiWeather
-        console.log("Fetched Karachi Weather: " + KarachiW)
-        console.log("Fetching Lahore Weather Please wait ...")
-        let LahoreW = await LahoreWeather
-        console.log("Fetched Lahore Weather: " + LahoreW)
-        
-}
-app()
-const app2 = async () => {
-        console.log("Hey I am waiting...")
-}
+//         console.log("Fetching Karachi Weather Please wait ...")
+//         let KarachiW = await KarachiWeather
+//         console.log("Fetched Karachi Weather: " + KarachiW)
+//         console.log("Fetching Lahore Weather Please wait ...")
+//         let LahoreW = await LahoreWeather
+//         console.log("Fetched Lahore Weather: " + LahoreW)
 
-const main1 = async () => {
-        console.log("Welcome to weather control room")
-        let a = await app()
-        // let b = await app2()
-}
-main1()
+// }
+// app()
+// const app2 = async () => {
+//         console.log("Hey I am waiting...")
+// }
+
+// const main1 = async () => {
+//         console.log("Welcome to weather control room")
+//         let a = await app()
+//         // let b = await app2()
+// }
+// main1()
 
 
 // callbacks
@@ -47,62 +47,95 @@ main1()
 // myFirst();
 
 
+// let x=3
+// if(x<=0){
+//         console.log("x is negative")
+// }
+// else{
+//         console.log("x is positive")
+// }
 
 
-// let myPromise = new Promise((res, rej) => {
-//     let x = 2;
-//     // some code (try to change x to 5)
-//     if (x === 0) {
-//         res("200: success");
-//     } else {
-//         rej("404: error");
-//     }
-// })
 
-//     .then(
-//         (value) => {
-//             console.log("request Accept " + value);
-//         },
-//         (error) => {
-//             console.log("request rejected " + error);
+
+
+
+let myPromise = new Promise((res, rej) => {
+        let x = 0;
+        // some code (try to change x to 5)
+        if (x === 0) {
+                res("200: success");
+        } else {
+                rej("404: error");
+        }
+})
+
+        .then(
+                (value) => {
+                        console.log("request Accept " + value);
+                },
+                (error) => {
+                        console.log("request rejected " + error);
+                }
+        );
+
+console.log(myPromise);
+
+
+
+
+// callback hell
+// function name(params) {
+//         function name(params) {
+//                 function name(params) {
+//                         function name(params) {
+
+//                         }
+//                 }
 //         }
-//     );
+// }
 
 
 
 // let Prom = new Promise((res, rej) => {
-//         setTimeout(() => {
-//                 res("Hello your request has been accepted")
-//         }, 2000)
-// }).then(
-//         (value) => {
-//                 console.log(value)
-//         }
+//         rej("Hello req reject")
+//         // setTimeout(() => {
+//         //         res("Hello your request has been accepted")
+//         // }, 2000)
+
+// })
+// // .then(
+// //         (value) => {
+// //                 console.log(value)
+// //         },
+// //         (error) => {
+// //                 console.log(error);
+// //         }
+// // )
+
+// console.log(Prom);
 
 
-// )
-
-
-let arr = [];
-let row = 3;
-let col = 3;
-let h = 0
+// let arr = [];
+// let row = 3;
+// let col = 3;
+// let h = 0
 
 // Loop to initialize 2D array elements.
-if (row === col && col === row) {
-    for (let i = 0; i < row; i++) {
-        arr[i] = [];
-        for (let j = 0; j < col; j++) {
-            arr[i][j] = h++;
-        }
-    }
-    let arrString = arr.map(row => row.join(' ')).join('\n');
-    console.log(arrString);
+// if (row === col && col === row) {
+//     for (let i = 0; i < row; i++) {
+//         arr[i] = [];
+//         for (let j = 0; j < col; j++) {
+//             arr[i][j] = h++;
+//         }
+//     }
+//     let arrString = arr.map(row => row.join(' ')).join('\n');
+//     console.log(arrString);
 
-}
-else {
-    console.log("Invalid");
-}
+// }
+// else {
+//     console.log("Invalid");
+// }
 
 
 
