@@ -55,11 +55,6 @@
 //         console.log("x is positive")
 // }
 
-
-
-
-
-
 let myPromise = new Promise((res, rej) => {
         let x = 0;
         // some code (try to change x to 5)
