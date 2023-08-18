@@ -55,26 +55,26 @@
 //         console.log("x is positive")
 // }
 
-let myPromise = new Promise((res, rej) => {
-        let x = 0;
-        // some code (try to change x to 5)
-        if (x === 0) {
-                res("200: success");
-        } else {
-                rej("404: error");
-        }
-})
+// let myPromise = new Promise((res, rej) => {
+//         let x = 0;
+//         // some code (try to change x to 5)
+//         if (x === 0) {
+//                 res("200: success");
+//         } else {
+//                 rej("404: error");
+//         }
+// })
 
-        .then(
-                (value) => {
-                        console.log("request Accept " + value);
-                },
-                (error) => {
-                        console.log("request rejected " + error);
-                }
-        );
+//         .then(
+//                 (value) => {
+//                         console.log("request Accept " + value);
+//                 },
+//                 (error) => {
+//                         console.log("request rejected " + error);
+//                 }
+//         );
 
-console.log(myPromise);
+// console.log(myPromise);
 
 
 
@@ -137,3 +137,54 @@ console.log(myPromise);
 // let a = "aaa , bbb , ccc"
 // let c = a.replaceAll(",", " ")
 // console.log(c)
+
+
+
+
+
+const prom = new Promise((res,rej)=>{
+        setTimeout(() => {
+           res("Hello your request has been accepted")     
+        },2000)      
+})
+.then((value)=>{
+        console.log(value)
+})
+.catch((err)=>{
+        console.log(err);
+})
+
+
+
+// try {
+//         throw new Error("your code have error")
+
+//         alertt("Welcome guest!");
+
+// }
+// catch (err) {
+//         let x = err.message
+//         alert(x)
+// }
+// function add(x, y) {
+//         return x + y;
+// }
+// document.write("<br>" + add(4, 5))
+
+function divide(a, b) {
+        if (b === 0) {
+                throw new Error("Cannot divide by zero");
+        }
+        return a / b;
+}
+
+try {
+        const result = divide(10, 0);
+        console.log(result);
+} catch (error) {
+        console.log(error.message);
+}
+
+
+
+
