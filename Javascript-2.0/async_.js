@@ -33,10 +33,24 @@ const PeshawarProm = new Promise((res, rej) => {
 
 
 
-    
+    console.log("fetching karachi weather....");
     const karanchi = await KarachiProm
+    console.log("fetching Lahore weather....");
     const Peshawar = await PeshawarProm
     return [karanchi,Peshawar]
 }
 
 asynprom()
+
+const controlWeather =async ()=> {
+    console.log("weather control");
+}
+
+const main = async() =>{
+    
+    const app2 = await controlWeather()
+    const app = await asynprom()
+}
+main()
+
+
