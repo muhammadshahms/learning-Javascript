@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="clicks()">Click me!</button>
+
+    <div id="myDIV" style="padding: 16px; background-color: lightgray">
+      <h3>A DIV element</h3>
+    </div>
+
+    <script>
+      const para = document.createElement("p");
+      para.innerHTML="hello"
+      function clicks(){
+        let a = document.querySelector("#myDIV p");
+        if(a){
+          document.querySelector("#myDIV").removeChild(a);
+        }
+        else{
+          document.querySelector("#myDIV").append(para);
+        }
+      }
+
+      // para.innerHTML = "This is a paragraph.";
+      // function clicks() {
+      //   var existingPara = document.querySelector("#myDIV p");
+      //   if (existingPara) {
+      //     document.querySelector("#myDIV").removeChild(existingPara);
+      //   } else {
+      //     document.querySelector("#myDIV").append(para);
+      //   }
+      // }
+    </script>
+  </body>
+</html>
